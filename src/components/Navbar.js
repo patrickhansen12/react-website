@@ -5,7 +5,7 @@ import './Navbar.css';
 
 function Navbar() {
    const [click,setClick] = useState(false);
-    const [button, setButton] = useState(true);
+  const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -28,7 +28,7 @@ function Navbar() {
           <nav className ="navbar">
               <div className="navbar-container">
               <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
-                  Wrycken <i class='fas fa-dragon'></i>
+                  FastTRVL <i class='fas fa-dragon'></i>
               </Link> 
               <div className ='menu-icon' onClick={handleClick}>
                   <i className={click ?' fas fa-times' :  'fas fa-bars' }/>
@@ -50,13 +50,14 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/sign-up' className = 'nav-links-mobile' onClick={closeMobileMenu}>
-                        Sign Up
+                    <Link to='/sign-up' className = 'nav-links' onClick={closeMobileMenu}>
+                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
                     </Link>
                 </li>
             </ul>
-            {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+        
               </div>
+          
               </nav>  
         </>
     );

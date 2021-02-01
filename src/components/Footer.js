@@ -3,6 +3,7 @@ import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
+
 function Footer() {
   return (
     <div className='footer-container'>
@@ -41,6 +42,7 @@ function Footer() {
             <Link to='/'>Support</Link>
             <Link to='/'>Destinations</Link>
             <Link to='/'>Sponsorships</Link>
+            <Link to='/'>FAQ</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
@@ -50,13 +52,15 @@ function Footer() {
             <Link to='/'>Ambassadors</Link>
             <Link to='/'>Agency</Link>
             <Link to='/'>Influencer</Link>
+            <Link to='/'>Tour guide</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <a  target="_blank" href="https://www.facebook.com/patrick.hansen.1690/">Facebook</a>
+            <a  target="_blank" href="https://www.youtube.com/channel/UCgdvmjqvrNI_7x6WXYEZH1A">Youtube</a>
+            <a  target="_blank" href="https://www.instagram.com/patrick.hansen.1690/">Instagram</a>
+            <a  target="_blank" href="https://twitter.com/patrickbroehans">Twitter</a>
+            <a  target="_blank" href="https://www.linkedin.com/in/patrick-hansen-01460617a/">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -64,52 +68,51 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              Wrycken
+              FastTRVL
               <i class='fas fa-dragon' />
             </Link>
           </div>
-          <small class='website-rights'>Wrycken 2021</small>
+          <small class='website-rights'>FastTRVL 2021</small>
           <div class='social-icons'>
-            <Link
+            <a
               class='social-icon-link facebook'
-              to='/'
               target='_blank'
+              href="https://www.facebook.com/patrick.hansen.1690/"
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link instagram'
-              to='/'
-              target='_blank'
+              href='https://www.instagram.com/patrick.hansen.1690'
+              target="_blank"
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link youtube'
-              to='/'
+              href="https://www.youtube.com/channel/UCgdvmjqvrNI_7x6WXYEZH1A"
               target='_blank'
               aria-label='Youtube'
             >
               <i class='fab fa-youtube' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link twitter'
-              to='/'
+              href='https://twitter.com/patrickbroehans'
               target='_blank'
               aria-label='Twitter'
             >
               <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
+            </a>
+            <a class='social-icon-link twitter'
+              href="https://www.linkedin.com/in/patrick-hansen-01460617a/"
               target='_blank'
               aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
+            >       
+            <i class='fab fa-linkedin' />
+            </a>
           </div>
         </div>
       </section>
