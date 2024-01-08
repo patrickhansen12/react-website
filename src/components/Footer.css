@@ -97,6 +97,25 @@
   .social-icon-link {
     color: #fff;
     font-size: 24px;
+    :hover{
+      cursor: pointer;
+    }
+    &.youtube{
+      color: red;
+    }
+    &.twitter{
+      color: #1DA1F2;
+    }
+    &.linkedin{
+      color: #0A66C2;
+    }
+    &.facebook{
+      padding: 2px 7px 2px 7px;
+      background-color: #4267B2;
+    }
+    &.instagram{
+      color: mediumvioletred;
+    }
   }
   
   .social-media {
@@ -111,14 +130,18 @@
     width: 90%;
     max-width: 1000px;
     margin: 40px auto 0 auto;
+    .social-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 240px;
+    }
+    .dragon-icon{
+      color: red;
+      margin-left: 10px;
+    }
   }
   
-  .social-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-  }
   
   .social-logo {
     color: #fff;

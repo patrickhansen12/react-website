@@ -4,6 +4,22 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
+  const openPopup = (url) => {
+    const isTwitter = url.includes('twitter');
+    const isYoutube = url.includes('youtube');
+    
+    if (isTwitter) {
+      const confirmationTwitter = window.confirm(`As I have no Twitter, do you want to see a dancing dragon?`);
+      if (confirmationTwitter) {
+        window.open('https://www.youtube.com/watch?v=4xnsmyI5KMQ&t=263s&ab_channel=TheMeekGuy', '_blank');
+      }
+    } else if (isYoutube) {
+      const confirmationYoutube = window.confirm(`As I have no interesting YouTube, do you want to see a person never giving up?`);
+      if (confirmationYoutube) {
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', '_blank');
+      }
+    }
+  }
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -63,53 +79,57 @@ function Footer() {
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              Wrycken
-              <i class='fas fa-dragon' />
-            </Link>
+            <a href='/' className='social-logo'>
+            DragonFlight Express
+              <i class='fas fa-dragon dragon-icon' />
+            </a>
           </div>
-          <small class='website-rights'>Wrycken 2021</small>
+          <small class='website-rights'>
+ 2024</small>
           <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
+            <a
+              href='https://www.facebook.com/patrick.hansen.1690/'
               target='_blank'
+              rel='noopener noreferrer'
+              class='social-icon-link facebook'
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
+            </a>
+            <a
+              href='https://www.instagram.com/your-instagram-profile'
               target='_blank'
+              rel='noopener noreferrer'
+              class='social-icon-link instagram'
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
-            </Link>
-            <Link
+            </a>
+            <a
+              rel='noopener noreferrer'
               class='social-icon-link youtube'
-              to='/'
-              target='_blank'
               aria-label='Youtube'
+              onClick={() => openPopup('https://www.youtube.com/your-youtube-channel')}
             >
               <i class='fab fa-youtube' />
-            </Link>
-            <Link
+            </a>
+            <a
+              rel='noopener noreferrer'
               class='social-icon-link twitter'
-              to='/'
-              target='_blank'
               aria-label='Twitter'
+              onClick={() => openPopup('https://twitter.com/your-twitter-profile')}
             >
               <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
+            </a>
+            <a
+              href='https://www.linkedin.com/in/patrick-hansen-01460617a/'
               target='_blank'
+              rel='noopener noreferrer'
+              class='social-icon-link linkedin'
               aria-label='LinkedIn'
             >
               <i class='fab fa-linkedin' />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

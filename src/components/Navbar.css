@@ -27,6 +27,11 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
+    text-wrap: nowrap;
+    .dragon-icon{
+      margin-left: 10px;
+      color: red;
+    }
   }
   
   .fa-typo3 {
